@@ -126,3 +126,5 @@ In addition to blocking mechanisms, detection and alerting should be strengthene
 Moving forward, continuous monitoring will be essential to detect new evasion techniques and ensure ongoing security. A further investigation is needed to determine whether the TOR usage was intentional or a sign of a potential compromise. Lastly, incident response readiness should be enhanced by establishing an automated response workflow to mitigate similar threats proactively. By enforcing these security controls, organizations can effectively reduce the risks associated with unauthorized TOR usage while maintaining better visibility and control over network activities.
 
 
+## Addtional Notes
+- [Designing the Threat Hunt Scenario (Unauthorized TOR Usage)](https://github.com/stevenrim/threathuntrepo/edit/main/designingthreathunt.md)
