@@ -12,7 +12,6 @@ To address these concerns, I was tasked to investigate Sam's workstation for any
 ## Step 1
 1.0 Known Information
 
-
 1.1 Objective 
 
 1.2 KQL Query
