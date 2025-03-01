@@ -164,15 +164,15 @@ DeviceFileEvents
 | where FileName contains "tor-shopping-list.txt"
 ```
 
-## Created By:
+## 9. Created By:
 - **Author Name**: Steven 
 - **Author Contact**: https://www.linkedin.com/in/stevenrim
 - **Date**: March 1, 2025
 
-## Validated By:
+## 10. Validated By:
 - **Reviewer Name**: 
 - **Reviewer Contact**: 
 - **Validation Date**: 
 
-## 7. Addtional Notes
+## 11. Addtional Link
 - [Designing the Threat Hunt Scenario (Unauthorized TOR Usage)](https://github.com/stevenrim/threathuntrepo/edit/main/designingthreathunt.md)
