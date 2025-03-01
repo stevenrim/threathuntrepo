@@ -5,7 +5,8 @@
 - EDR: Microsoft Defender for Endpoint
 - Query Language: KQL (Kusto Query Language)
 - Windows VM on Azure
-## Scenario
+  
+## Scenario Overview
 An alert was triggered in the security monitoring system regarding unusual network activity originating from an internal workstation in the finance department. The workstation "stevenmde", assigned to Sam who is a mid-level employee, exhibited encrypted traffic patterns that indicated connections to known TOR exit nodes. This behavior raised red flags, as the use of TOR and similar privacy tools were strictly prohibited within the organization.
 
 To address these concerns, I was tasked to investigate Sam's workstation for any signs of unusual activity.
@@ -16,34 +17,94 @@ To address these concerns, I was tasked to investigate Sam's workstation for any
 - Workstation is "stevenmde"
 
 1.1 Objective 
-- Start initial KQL Query to pull all relevant logs on "stevenmde".
+- Start initial KQL Query to pull all relevant logs on "stevenmde" having to with any files that contain "TOR".
 
 1.2 KQL Query
 ```kql
+// Detect TOR installer download
 DeviceFileEvents
 | where DeviceName == "stevenmde"
 | where FileName startswith "tor"
 ```
 1.3 Query Results
 <br>
-The following screenshot shows that the tor installer file (tor-browser-windows-x86_64-portable-14.0.6.exe) was downloaded into the downloads folder on "stevemde" and moved to the desktop.
+The following screenshot shows that the tor installer file (tor-browser-windows-x86_64-portable-14.0.6.exe) was downloaded into the downloads folder on "stevemde" and moved to the desktop. Notice that a tor-shopping-list.txt file was created as well. 
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"/>
 
 ## Step 2
 2.0 Known Information
-- TOR installer file name
+- TOR installer file name: tor-browser-windows-x86_64-portable-14.0.6.exe
 
 2.1 Objective 
-- Investigate Process Command Line
+- Investigate Process Command Line for suspicious activity.
 
 2.2 KQL Query
 ```kql
+//Detect silent download of TOR 
 DeviceProcessEvents
 | where DeviceName == "stevenmde"
 | where FileName == "tor-browser-windows-x86_64-portable-14.0.6.exe"
 | project Timestamp, DeviceName, ActionType, FileName, ProcessCommandLine
+
+//Detect silent download of TOR
+DeviceFileEvents
+| where DeviceName == "xxxx"
+| where FileName has_any ("tor.exe", "firefox.exe")
+| project  Timestamp, DeviceName, RequestAccountName, ActionType, InitiatingProcessCommandLine
 ```
 2.3 Query Results
-The following screenshot shows the process was created or TOR was installed silently, indicated by the ProcessCommandLine "/S" function.
+<br>
+The DeviceProcessEvents screenshot shows the process was created or TOR was installed silently, indicated by the ProcessCommandLine "/S" function.
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step2.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step2.png"/>
 
+The DevicefileEvents screenshot shows additional verification that TOR exists on the machine and was installed silently.
+<a href="https://github.com/stevenrim/threathuntrepo/blob/main/step2(2).png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step2(2).png"/>
+
+
+## Step 3
+3.0 Known Information
+- N/A
+
+3.1 Objective 
+- Confirm the TOR browser was launched and created network connections.
+
+3.2 KQL Query
+```kql
+// TOR Browser or service was launched
+DeviceProcessEvents
+| where ProcessCommandLine has_any("tor.exe","firefox.exe")
+| project  Timestamp, DeviceName, AccountName, ActionType, ProcessCommandLine
+
+// TOR Browser or service being used and is actively creating network connections
+DeviceNetworkEvents
+| where DeviceName == "stevenmde"
+| where InitiatingProcessFileName in~ ("tor.exe", "firefox.exe")
+| project Timestamp, DeviceName, InitiatingProcessAccountName, InitiatingProcessFileName, RemoteIP, RemotePort, RemoteUrl
+| order by Timestamp desc
+```
+3.3 Query Results
+<br>
+The DeviceProcessEvents screenshot shows that the TOR browser was launched.
+<a href="https://github.com/stevenrim/threathuntrepo/blob/main/step3.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step3.png"/>
+
+The DeviceNetworkEvents screenshot shows the the RemoteIP addresses and RemoteUrl links. These are destinations that "stevenmde" is connecting to. Notice the url's seem to be obfuscated or could be TOR relays addresses instead of the real domain. The RemotIP addresses are supposedly in different parts of the world. It also shows the RemotePort or the type of connections that are commonly associated with TOR (9150, 9002, and 443). 
+<a href="https://github.com/stevenrim/threathuntrepo/blob/main/step3(2).png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step3(2).png"/>
+
+## Step 4 
+4.0 Known Information
+- From the initial KQL query, there was a file text file created with a suspicious file name titled "tor-shopping-list.txt".
+
+4.1 Objective 
+- Confirm the contents of the text file to see if it can support that Sam had motive to be on the darkweb. 
+
+4.2 KQL Query
+```kql
+// User shopping list was created and, changed, or deleted
+DeviceFileEvents
+| where FileName contains "tor-shopping-list.txt"
+
+```
+4.3 Query Results
+<br>
+Unfortunately, the analyst would not have access to the file unless the "Live Response" function was enabled on MDE by the administrator. But if the analyst did have access to that function, they could easily open up PowerShell and access the file with simple commands. However, the screeshot shows that the file was created, renamed with a suspicious title, and modified.
+<a href="https://github.com/stevenrim/threathuntrepo/blob/main/step4.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step4.png"/>
