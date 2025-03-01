@@ -101,6 +101,7 @@ The DeviceNetworkEvents screenshot shows the the RemoteIP addresses and RemoteUr
 ```kql
 // User shopping list was created and, changed, or deleted
 DeviceFileEvents
+| where DeviceName == "xxxx"
 | where FileName contains "tor-shopping-list.txt"
 
 ```
