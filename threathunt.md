@@ -25,6 +25,8 @@ DeviceFileEvents
 | where FileName startswith "tor"
 ```
 1.3 Query Results
+The following screenshot of the query shows that a tor file 
+<a href="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"/>
 
 ## Step 1
 1.0 Known Information
