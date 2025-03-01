@@ -25,17 +25,25 @@ DeviceFileEvents
 | where FileName startswith "tor"
 ```
 1.3 Query Results
-The following screenshot of the query shows that a tor file 
+<br>
+The following screenshot shows that the tor installer file (tor-browser-windows-x86_64-portable-14.0.6.exe) was downloaded into the downloads folder on "stevemde" and moved to the desktop.
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"/>
 
-## Step 1
-1.0 Known Information
+## Step 2
+2.0 Known Information
+- TOR installer file name
 
+2.1 Objective 
+- Investigate Process Command Line
 
-1.1 Objective 
-
-1.2 KQL Query
+2.2 KQL Query
 ```kql
-
+DeviceProcessEvents
+| where DeviceName == "stevenmde"
+| where FileName == "tor-browser-windows-x86_64-portable-14.0.6.exe"
+| project Timestamp, DeviceName, ActionType, FileName, ProcessCommandLine
 ```
-1.3 Query Results
+2.3 Query Results
+The following screenshot shows the process was created or TOR was installed silently, indicated by the ProcessCommandLine "/S" function.
+<a href="https://github.com/stevenrim/threathuntrepo/blob/main/step2.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step2.png"/>
+
