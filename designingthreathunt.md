@@ -1,8 +1,7 @@
 (Disclaimer: This article presents a fictional threat hunting scenario created for educational and portfolio purposes. Any similarities to real individuals, organizations, or events are purely coincidental. The investigation techniques, queries, and methodologies demonstrated are based on real-world cybersecurity practices but are applied in a simulated environment. This content is intended to showcase threat hunting skills, analytical thinking, and investigative processes for professional development. It does not reflect or promote any actual security incidents or breaches.)
 
 # Designing the Threat Hunt Scenario (Unauthorized TOR Usage)
-**Unauthorized TOR Browser Installation and Use**
-
+## Unauthorized TOR Browser Installation and Use
 Sam, a mid-level employee in the finance department, was growing increasingly frustrated with the company's strict internet usage policies. He felt that his personal browsing and online interests were being overly restricted and after some research, he came across TOR, a privacy tool that promised to mask his internet traffic and give him the anonymity he desired. Also, the IT team didn't deprovision his workstation from the previous employee/user (stevenmde). Did they not even care or were they being incompetent? Regardless, Sam felt that his actions would go undetected and decided to install the TOR browser during a quiet evening shift.
 
 ## Steps to take as a "bad actor" to create logs and IoCs:
@@ -12,8 +11,6 @@ Sam, a mid-level employee in the finance department, was growing increasingly fr
 4. Connect to TOR and browse a few sites: Google.com, Yahoo.com, and Reddit.com
 6. Create a file on the desktop called ```tor-shopping-list.txt``` and make a shopping list for the darkweb. 
 7. Delete the file.
-
----
 
 ## Tables Used to Detect IoCs:
 | **Parameter**       | **Description**                                                              |
@@ -34,7 +31,6 @@ Sam, a mid-level employee in the finance department, was growing increasingly fr
 | **Info**|https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table|
 | **Purpose**| Used to detect TOR network activity, specifically tor.exe and firefox.exe making connections over ports to be used by TOR (9001, 9030, 9040, 9050, 9051, 9150).|
 
----
 
 ## Related Queries:
 ```kql
@@ -73,7 +69,6 @@ DeviceFileEvents
 | where FileName contains "tor-shopping-list.txt"
 ```
 
----
 
 ## Created By:
 - **Author Name**: Steven 
@@ -85,12 +80,12 @@ DeviceFileEvents
 - **Reviewer Contact**: 
 - **Validation Date**: 
 
----
+
 
 ## Additional Notes:
-- **None**
+- [Threat Hunt Report: Unauthorized Download, Installation, and Use of TOR](https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md)
 
----
+
 
 ## Revision History:
 | **Version** | **Changes**                   | **Date**         | **Modified By**   |
