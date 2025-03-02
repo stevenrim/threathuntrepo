@@ -181,6 +181,6 @@ DeviceFileEvents
 
 
 ## 12. Addtional Link
-- [Designing the Threat Hunt Scenario (Unauthorized TOR Usage)](https://github.com/stevenrim/threathuntrepo/edit/main/designingthreathunt.md)
+- [Designing the Threat Hunt Scenario (Unauthorized TOR Usage)](https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md)
 
 
