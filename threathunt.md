@@ -85,11 +85,11 @@ Query Results: Unfortunately, the analyst would not have access to the file unle
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step4.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step4.png"/>
 
 ## 4. Chronological Events
-- download
-- installed silently using powershell
-- launched browser
-- connected with numerous sites through TOR browser
-- created to shopping list text file 
+- March 1, 2025 @ 1:22PM User downloaded TOR installer from TOR's website.
+- March 1, 2025 @ 1:24PM User initiated silent install of TOR using "/S" command line.
+- March 1, 2025 @ 1:24PM tor.exe was installed and file was created.
+- March 1, 2025 @ 1:25PM to 4:12PM tor.exe was used to access multiple obfuscated url's at IP addresses around the world.
+- March 1, 2025 @ 1:45PM User stopped browsing to create a suspicous text file titled "tor-shopping-list" before continuing to additional sites.
 
 ## 5. Summary
 <br>
@@ -172,7 +172,15 @@ DeviceFileEvents
 ## 10. Validated By:
 - **Reviewer Name**: 
 - **Reviewer Contact**: 
-- **Validation Date**: 
+- **Validation Date**:
 
-## 11. Addtional Link
+## 11. Revision History:
+| **Version** | **Changes**                   | **Date**         | **Modified By**   |
+|-------------|-------------------------------|------------------|-------------------|
+| 1.0         | Initial draft                  | `March  1, 2025`  | `Steven Rim`   
+
+
+## 12. Addtional Link
 - [Designing the Threat Hunt Scenario (Unauthorized TOR Usage)](https://github.com/stevenrim/threathuntrepo/edit/main/designingthreathunt.md)
+
+
