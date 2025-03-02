@@ -83,7 +83,7 @@ DeviceFileEvents
 
 
 ## Additional Notes:
-- [Threat Hunt Report: Unauthorized Download, Installation, and Use of TOR](https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md)
+- [Threat Hunt Report: Unauthorized TOR Usage](https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md)
 
 
 
