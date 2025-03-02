@@ -6,14 +6,3 @@ Welcome to my threat hunt creation repository. Here I document my threat hunt sc
 ## Threat Scenario 1: Unauthorized TOR Usage
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md"><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href="https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md"><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
 
-## Threat Scenario 2
-<a href="https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md"><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href="https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md"><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
-
-## Threat Scenario 3
-<a href="https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md"><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href="https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md"><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
-
-## Threat Scenario 4
-<a href="https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md"><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href="https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md"><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
-
-## Threat Scenario 5
-<a href="https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md"><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href="https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md"><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
