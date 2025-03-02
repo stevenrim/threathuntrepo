@@ -1,10 +1,10 @@
 (Disclaimer: This article presents a fictional threat hunting scenario created for educational and portfolio purposes. Any similarities to real individuals, organizations, or events are purely coincidental. The investigation techniques, queries, and methodologies demonstrated are based on real-world cybersecurity practices but are applied in a simulated environment. This content is intended to showcase threat hunting skills, analytical thinking, and investigative processes for professional development. It does not reflect or promote any actual security incidents or breaches.)
 
 # Threat Hunt Report: Unauthorized TOR Usage
-Detection of Unauthorized TOR Browser Installation and Use
+- Detection of Unauthorized TOR Browser Installation and Use
 
 ## 1. Scenario Overview
-An alert was triggered in the security monitoring system regarding unusual network activity originating from an internal workstation in the finance department. The workstation "stevenmde", assigned to Sam who is a mid-level employee, exhibited encrypted traffic patterns that indicated connections to known TOR exit nodes. This behavior raised red flags, as the use of TOR and similar privacy tools were strictly prohibited within the organization. To address these concerns, I was tasked to investigate Sam's workstation for any signs of unusual activity.
+- An alert was triggered in the security monitoring system regarding unusual network activity originating from an internal workstation in the finance department. The workstation "stevenmde", assigned to Sam who is a mid-level employee, exhibited encrypted traffic patterns that indicated connections to known TOR exit nodes. This behavior raised red flags, as the use of TOR and similar privacy tools were strictly prohibited within the organization. To address these concerns, I was tasked to investigate Sam's workstation for any signs of unusual activity.
 
 ## 2. High-Level TOR Related IoC Discovery Plan
 - Check DeviceFileEvents for any tor(.exe) or firefox(.exe) file events.
@@ -12,7 +12,7 @@ An alert was triggered in the security monitoring system regarding unusual netwo
 - Check DeviceNetworkEvents for any signs of outgoing connections of known TOR ports.
 
 ## 3. Steps Taken
-Step 1: Used initial KQL Query to pull all relevant logs on "stevenmde" having to with any files that contain "TOR".
+**Step 1: Used initial KQL Query to pull all relevant logs on "stevenmde" having to with any files that contain "TOR".**
 ```kql
 // Detect TOR installer download
 DeviceFileEvents
@@ -24,7 +24,7 @@ Query Results: The following screenshot shows that the tor installer file (tor-b
 <br>
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step1.png"/>
 
-Step 2: Investigated Process Command Line for suspicious activity.
+**Step 2: Investigated Process Command Line for suspicious activity.**
 ```kql
 //Detect silent download of TOR 
 DeviceProcessEvents
@@ -49,7 +49,7 @@ Query Results: The DevicefileEvents screenshot shows additional verification tha
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step2(2).png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step2(2).png"/>
 
 
-Step 3: Confirmed the TOR browser was launched and created network connections.
+**Step 3: Confirmed the TOR browser was launched and created network connections.**
 ```kql
 // TOR Browser or service was launched
 DeviceProcessEvents
@@ -73,7 +73,7 @@ Query results: The DeviceNetworkEvents screenshot shows the the RemoteIP address
 <br>
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/step3(2).png"><img src="https://github.com/stevenrim/threathuntrepo/blob/main/step3(2).png"/>
 
-Step 4: Confirmed the creation and existence of a suspicious text file. 
+**Step 4: Confirmed the creation and existence of a suspicious text file.**
 ```kql
 // User shopping list was created and, changed, or deleted
 DeviceFileEvents
