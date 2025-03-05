@@ -6,6 +6,9 @@ Welcome to my threat hunt creation repository. Here I document the creation of t
 ## 🔍 Threat Scenario 1: Unauthorized TOR Usage
 <a href="https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md"><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href="https://github.com/stevenrim/threathuntrepo/blob/main/threathunt.md"><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
 
+## 🔍 Threat Scenario 2: (coming soon)
+<a href=""><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href=""><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
+
 ## 📄 Threat Hunt Reports 
 <a href="https://github.com/stevenrim/threathunt1/blob/main/README.md"><img src="https://img.shields.io/badge/-CTF Threat Hunt Report: Uncovering a Data Breach with MDE-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
 <br>
