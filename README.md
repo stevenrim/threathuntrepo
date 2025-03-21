@@ -10,10 +10,13 @@ Welcome to my threat hunt creation repository. Here I document the creation of t
 <a href=""><img src="https://img.shields.io/badge/-Designing the Scenario-FF0000?&style=for-the-badge&logo=github&logoColor=white"/><a href=""><img src="https://img.shields.io/badge/-Threat Hunt Report-000080?&style=for-the-badge&logo=github&logoColor=white"/></a>
 
 ## 📄 Threat Hunt Reports 
+<a href=""><img src="https://img.shields.io/badge/-Threat Hunt Report: Azure Abuse Notice-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
+<br>
 <a href="https://github.com/stevenrim/threathunt1/blob/main/README.md"><img src="https://img.shields.io/badge/-CTF Threat Hunt Report: Uncovering a Data Breach with MDE-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
 <br>
 <a href="https://medium.com/@stevenrim/threat-hunt-report-public-exposure-715f1befb669"><img src="https://img.shields.io/badge/-Threat Hunt Report: Public Exposure-000000?&style=for-the-badge&logo=medium&logoColor=white"/></a>
 <br>
 <a href="https://medium.com/@stevenrim/threat-hunt-report-sudden-network-slowdowns-a10730cda525"><img src="https://img.shields.io/badge/-Threat Hunt Report: Sudden Network Slowdowns-000000?&style=for-the-badge&logo=medium&logoColor=white"/></a>
+
 
 
