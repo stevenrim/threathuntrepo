@@ -180,7 +180,7 @@ DeviceFileEvents
 | 1.0         | Initial draft                  | `March  1, 2025`  | `Steven Rim`   
 
 
-## 12. Addtional Link
+## 12. Additional Link
 - [Designing the Threat Hunt Scenario (Unauthorized TOR Usage)](https://github.com/stevenrim/threathuntrepo/blob/main/designingthreathunt.md)
 
 
