@@ -4,7 +4,7 @@
 - Detection of Unauthorized TOR Browser Installation and Use
 
 ## 1. Scenario Overview
-- An alert was triggered in the security monitoring system regarding unusual network activity originating from an internal workstation in the finance department. The workstation "stevenmde", assigned to Sam who is a mid-level employee, exhibited encrypted traffic patterns that indicated connections to known TOR exit nodes. This behavior raised red flags, as the use of TOR and similar privacy tools were strictly prohibited within the organization. To address these concerns, I was tasked to investigate Sam's workstation for any signs of unusual activity.
+- An alert was triggered in the security monitoring system regarding unusual network activity originating from an internal workstation in the finance department. The workstation "stevenmde", assigned to Sam who is a mid-level employee, exhibited encrypted traffic patterns that indicated connections to known TOR exit nodes. This behavior raised red flags, as the use of TOR and similar privacy tools were strictly prohibited within the organization. Additionally, it seemed that the workstation was not deprovisioned from the last user. To address these concerns, I was tasked to investigate Sam's workstation for any signs of unusual activity.
 
 ## 2. High-Level TOR Related IoC Discovery Plan
 - Check DeviceFileEvents for any tor(.exe) or firefox(.exe) file events.
