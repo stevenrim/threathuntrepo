@@ -14,6 +14,6 @@ Welcome to my threat hunt creation repository. Here I document the creation of t
 <br>
 <a href="https://medium.com/@stevenrim/threat-hunt-report-sudden-network-slowdowns-a10730cda525"><img src="https://img.shields.io/badge/-Threat Hunt Report: Sudden Network Slowdowns-000000?&style=for-the-badge&logo=medium&logoColor=white"/></a>
 <br>
-<a href=""><img src="https://img.shields.io/badge/-Threat Hunt Report: Data Exfiltration from PIP'd Employee-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://github.com/stevenrim/threathunt3/blob/main/README.md"><img src="https://img.shields.io/badge/-Threat Hunt Report: Data Exfiltration from PIP'd Employee-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
 
 
