@@ -34,7 +34,7 @@ DeviceProcessEvents
 
 //Detect silent download of TOR
 DeviceFileEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where FileName has_any ("tor.exe", "firefox.exe")
 | project  Timestamp, DeviceName, RequestAccountName, ActionType, InitiatingProcessCommandLine
 ```
@@ -77,7 +77,7 @@ Query results: The DeviceNetworkEvents screenshot shows the the RemoteIP address
 ```kql
 // User shopping list was created and, changed, or deleted
 DeviceFileEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where FileName contains "tor-shopping-list.txt"
 
 ```
@@ -131,18 +131,18 @@ TOR usage was confirmed on endpoint "stevenmde". The device was isolated and the
 ```kql
 // Detect TOR installer download
 DeviceFileEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where FileName startswith "tor"
 
 //Detect silent download of TOR 
 DeviceProcessEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where FileName == "tor-browser-windows-x86_64-portable-xxxxxx.exe"
 | project Timestamp, DeviceName, ActionType, FileName, ProcessCommandLine
 
 //Detect silent download of TOR
 DeviceFileEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where FileName has_any ("tor.exe", "firefox.exe")
 | project  Timestamp, DeviceName, RequestAccountName, ActionType, InitiatingProcessCommandLine
 
@@ -153,14 +153,14 @@ DeviceProcessEvents
 
 // TOR Browser or service being used and is actively creating network connections
 DeviceNetworkEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where InitiatingProcessFileName in~ ("tor.exe", "firefox.exe")
 | project Timestamp, DeviceName, InitiatingProcessAccountName, InitiatingProcessFileName, RemoteIP, RemotePort, RemoteUrl
 | order by Timestamp desc
 
 // User shopping list was created and, changed, or deleted
 DeviceFileEvents
-| where DeviceName == "xxxx"
+| where DeviceName == "stevenmde"
 | where FileName contains "tor-shopping-list.txt"
 ```
 
