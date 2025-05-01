@@ -1,9 +1,9 @@
 # Steven's Threat Hunt Repository
 Welcome to my threat hunt creation repository. Here I document the creation of threat hunt scenarios and associated threat hunt reports. I'll also have a section for other threat hunting projects or CTFs I complete. Click the links below to enjoy. Thank you for visiting!
 
-⚠️ 
+## ⚠ Disclaimer
 ```
-Disclaimer: This repository and github site presents fictional threat hunting scenarios created for
+This repository and github site presents fictional threat hunting scenarios created for
 educational and portfolio purposes. Any similarities to real individuals, organizations, or events are
 purely coincidental. The investigation techniques, queries, and methodologies demonstrated are based on
 real-world cybersecurity practices but are applied in a simulated environment. This content is intended
