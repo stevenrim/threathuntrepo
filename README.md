@@ -1,4 +1,4 @@
-# Steven's Threat Hunt Repository
+# Steven's Threat Hunt & IR Repository
 Welcome to my threat hunt creation repository. Here I document the creation of threat hunt scenarios and associated threat hunt reports. I'll also have a section for other threat hunting projects or CTFs I complete. Click the links below to enjoy. Thank you for visiting!
 
 ## ⚠ Disclaimer
