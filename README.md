@@ -25,3 +25,7 @@ development. It does not reflect or promote any actual security incidents or bre
 <a href="https://github.com/stevenrim/threathunt3/blob/main/README.md"><img src="https://img.shields.io/badge/-Threat Hunt Report: Data Exfiltration from PIP'd Employee-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
 <br>
 <a href="https://github.com/stevenrim/threathunt4/blob/main/README.md"><img src="https://img.shields.io/badge/-Threat Hunt Report: Zero Day Ransomware PwnCrypt Outbreak-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
+
+## 📄 Incident Reponse Reports
+<a href="https://github.com/stevenrim/incidentresponse1/blob/main/README.md"><img src="https://img.shields.io/badge/-IR Scenario: Virtual Machine Brute Force Detection-000000?&style=for-the-badge&logo=github&logoColor=white"/></a>
+
